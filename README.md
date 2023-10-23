@@ -3,7 +3,7 @@ Learning to implement a Convolution Neural Network
 
 Please note that the mnist training dataset is provided as a mnist_train.7z file and will need to be extracted before using it.
 
-To understand this code I followed the youtube tutorial by Rae which is linked here
+# To understand this code I followed the YouTube tutorial by Rae which is linked here
 </br>Intro</br>
 https://www.youtube.com/watch?v=3MMonOWGe0M&list=PLpcNcOt2pg8k_YsrMjSwVdy3GX-rc_ZgN&index=1
 </br>Chapter 1</br>
@@ -21,7 +21,7 @@ https://www.youtube.com/watch?v=mWL0_11uiEU&list=PLpcNcOt2pg8k_YsrMjSwVdy3GX-rc_
 
 
 
-To follow the basics of a Neural Network, I have followed the youtube tutorials by 3Blue1Brown which can e found here
+# To follow the basics of a Neural Network, I have followed the YouTube tutorials by 3Blue1Brown which can be found here
 </br>Chapter 1</br>
 https://www.youtube.com/watch?v=aircAruvnKk&t=6s
 </br>Chapter 2</br>

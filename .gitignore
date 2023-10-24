@@ -28,3 +28,4 @@ replay_pid*
 /.idea/vcs.xml
 /convolutionNN_learning.iml
 /data/mnist_train.csv
+/.idea/uiDesigner.xml

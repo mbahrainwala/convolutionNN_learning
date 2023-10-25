@@ -7,7 +7,7 @@ public class FullyConnectedLayer extends Layer{
     private final double[][] _weights;
     private final int _inputLength;
     private final int _outputLength;
-    private final double[] lastZ; //should be the size of _outputLength
+    private double[] lastZ; //should be the size of _outputLength
     private double[] lastInput; //should be the size of _inputLength
 
     private final long SEED;
@@ -19,8 +19,6 @@ public class FullyConnectedLayer extends Layer{
         this._inputLength = inLenght;
         this._outputLength = outLength;
 
-        lastZ = new double[_outputLength];
-
         this._weights = new double[inLenght][outLength];
         this.SEED = seed;
         this.LEARNING_RATE = learningRate;
@@ -31,17 +29,21 @@ public class FullyConnectedLayer extends Layer{
     private double[] fullyConnectedForwardPass(double[] input){
         lastInput = input;
 
-        for(int j=0; j< _outputLength; j++){
-            for(int i=0; i< _inputLength; i++) {
-                lastZ[j] += input[i] * _weights[i][j];
+        double[] out = new double[_outputLength];
+        lastZ = new double[_outputLength];
+
+
+        for(int i = 0; i < _inputLength; i++){
+            for(int j = 0; j < _outputLength; j++){
+                lastZ[j] += input[i]*_weights[i][j];
             }
         }
 
-        double[] out = new double[_outputLength];
 
-        for(int j=0; j< _outputLength; j++){
-            out[j] = relu(lastZ[j]);
+        for(int j = 0; j < _outputLength; j++){
+            out[j] = reLu(lastZ[j]);
         }
+
 
         return out;
     }
@@ -146,7 +148,7 @@ public class FullyConnectedLayer extends Layer{
         }
     }
 
-    private double relu(double input){
+    private double reLu(double input){
         if(input <=0)
             return 0;
         else return input;

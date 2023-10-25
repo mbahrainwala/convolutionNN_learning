@@ -33,9 +33,9 @@ public class Main {
             for (int i = 0; i < epochs; i++) {
                 Collections.shuffle(imagesTrain);
                 net.train(imagesTrain);
+                rate = net.test(imagesTest);
+                System.out.println("Success rate after round " + i+1 + ": " + rate);
             }
-            rate = net.test(imagesTest);
-            System.out.println("Post training success rate: "+rate);
         }catch (Exception e) {
             System.out.println(e.getMessage());
         }

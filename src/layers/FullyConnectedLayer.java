@@ -15,7 +15,7 @@ public class FullyConnectedLayer extends Layer{
 
     private static final double LEEK = 0.01;
 
-    public FullyConnectedLayer(int inLenght,int outLength, long seed, double learningRate){
+    public FullyConnectedLayer(int inLenght, int outLength, long seed, double learningRate){
         this._inputLength = inLenght;
         this._outputLength = outLength;
 
@@ -33,7 +33,7 @@ public class FullyConnectedLayer extends Layer{
 
         for(int j=0; j< _outputLength; j++){
             for(int i=0; i< _inputLength; i++) {
-                lastZ[j] += input[i] * _weights[i][j];
+                lastZ[j] += input[j] * _weights[i][j];
             }
         }
 
@@ -93,7 +93,7 @@ public class FullyConnectedLayer extends Layer{
 
             for (int j = 0; j < _outputLength; j++) {
                 dO_dZ = derivative_relu(lastZ[j]);
-                dZ_dW = lastInput[k];
+                dZ_dW = lastInput[j];
 
                 dL_dW = dL_dO[j] * dO_dZ * dZ_dW; //this is the cost.
 

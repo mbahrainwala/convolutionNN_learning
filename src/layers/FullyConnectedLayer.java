@@ -33,7 +33,7 @@ public class FullyConnectedLayer extends Layer{
 
         for(int j=0; j< _outputLength; j++){
             for(int i=0; i< _inputLength; i++) {
-                lastZ[j] += input[j] * _weights[i][j];
+                lastZ[j] += input[i] * _weights[i][j];
             }
         }
 
@@ -50,7 +50,7 @@ public class FullyConnectedLayer extends Layer{
 
     @Override
     public double[] getOutput(List<double[][]> input) throws Exception {
-        return getOutput(fullyConnectedForwardPass(matrixToVector(input)));
+        return getOutput(matrixToVector(input));
     }
 
     @Override
@@ -93,7 +93,7 @@ public class FullyConnectedLayer extends Layer{
 
             for (int j = 0; j < _outputLength; j++) {
                 dO_dZ = derivative_relu(lastZ[j]);
-                dZ_dW = lastInput[j];
+                dZ_dW = lastInput[k];
 
                 dL_dW = dL_dO[j] * dO_dZ * dZ_dW; //this is the cost.
 

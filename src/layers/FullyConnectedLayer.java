@@ -62,8 +62,7 @@ public class FullyConnectedLayer extends Layer{
 
     @Override
     public void backPropagation(List<double[][]> dLdO) {
-        if(get_previousLayer() !=null)
-            get_previousLayer().backPropagation(matrixToVector(dLdO));
+        backPropagation(matrixToVector(dLdO));
     }
 
     /**

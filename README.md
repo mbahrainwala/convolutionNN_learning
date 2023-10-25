@@ -16,6 +16,9 @@ https://www.youtube.com/watch?v=JJUlkPFq1q8&list=PLpcNcOt2pg8k_YsrMjSwVdy3GX-rc_
 https://www.youtube.com/watch?v=8WrEz-M50oQ&list=PLpcNcOt2pg8k_YsrMjSwVdy3GX-rc_ZgN&index=5
 #### Chapter 5
 https://www.youtube.com/watch?v=mWL0_11uiEU&list=PLpcNcOt2pg8k_YsrMjSwVdy3GX-rc_ZgN&index=6
+#### Chapter 6
+#### Chapter 7
+https://www.youtube.com/watch?v=N62cVxu9JqE
 
 
 # To follow the basics of a Neural Network, I have followed the YouTube tutorials by 3Blue1Brown which can be found here

@@ -228,8 +228,6 @@ public class ConvolutionLayer extends Layer{
 
     /**
      * This will create a spaced out matrix based on our input.
-     * @param input
-     * @return
      */
     private double[][] spaceArray(double[][] input){
         if(_stepSize < 2){

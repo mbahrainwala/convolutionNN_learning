@@ -236,13 +236,13 @@ public class ConvolutionLayer extends Layer{
             return input;
         }
 
-        int outRows = (input.length-1)*_stepSize + 1;
-        int outCols = (input[0].length-1)*_stepSize + 1;
+        int outRows = (input.length - 1)* _stepSize + 1;
+        int outCols = (input[0].length -1)*_stepSize+1;
 
         double[][] output = new double[outRows][outCols];
 
-        for(int i=0; i<outRows; i++){
-            for(int j=0; j<outCols; j++){
+        for(int i = 0; i < input.length; i++){
+            for(int j = 0; j < input[0].length; j++){
                 output[i*_stepSize][j*_stepSize] = input[i][j];
             }
         }

@@ -3,6 +3,7 @@ import Network.NeuralNetwork;
 import data.DataReader;
 import data.Image;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -37,7 +38,7 @@ public class Main {
                 System.out.println("Success rate after round " + i+1 + ": " + rate);
             }
         }catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage()+":"+ Arrays.stream(e.getStackTrace()).toList());
         }
     }
 }

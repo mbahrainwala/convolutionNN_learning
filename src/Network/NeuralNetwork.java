@@ -34,14 +34,14 @@ public class NeuralNetwork {
         int numClasses = networkOutput.length;
 
         double[] expected = new double[numClasses];
-        expected[correctAnswer] = 1;
+        expected[correctAnswer] = -1;
         /**
          * all the expected output vectors should be 0 except for the correct one which should be 1.
          *
          * subtract the expected from the network output to get the error.
          */
 
-        return MatrixUtility.add(networkOutput, MatrixUtility.multiply(expected, -1));
+        return MatrixUtility.add(networkOutput, expected);
     }
 
     private int getMaxIndex(double[] input){

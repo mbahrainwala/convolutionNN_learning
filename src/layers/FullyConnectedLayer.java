@@ -36,12 +36,8 @@ public class FullyConnectedLayer extends Layer{
         for(int i = 0; i < _inputLength; i++){
             for(int j = 0; j < _outputLength; j++){
                 lastZ[j] += input[i]*_weights[i][j];
+                out[j] = reLu(lastZ[j]);
             }
-        }
-
-
-        for(int j = 0; j < _outputLength; j++){
-            out[j] = reLu(lastZ[j]);
         }
 
 

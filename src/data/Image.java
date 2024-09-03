@@ -34,11 +34,15 @@ public record Image(double[][] data, int label) {
 
         for (double[] datum : data) {
             for (int j = 0; j < data[0].length; j++) {
-                if (datum[j] != 0) {
-                    sb.append(datum[j]);
-                    sb.append(", ");
-                } else
-                    sb.append("    ");
+                if(datum[j]>=192)
+                    sb.append("▓▓");
+                else if(datum[j]>=128)
+                    sb.append("▒▒");
+                else if(datum[j]>=64)
+                    sb.append("░░");
+                else
+                    sb.append("  ");
+
             }
             sb.append("\n");
         }

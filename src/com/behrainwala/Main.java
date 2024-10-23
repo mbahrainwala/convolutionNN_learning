@@ -1,7 +1,9 @@
-import Network.NetworkBuilder;
-import Network.NeuralNetwork;
-import data.DataReader;
-import data.Image;
+package com.behrainwala;
+
+import com.behrainwala.Network.NetworkBuilder;
+import com.behrainwala.Network.NeuralNetwork;
+import com.behrainwala.data.DataReader;
+import com.behrainwala.data.Image;
 
 import java.util.Arrays;
 import java.util.Collections;

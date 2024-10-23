@@ -1,0 +1,12 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.behrainwala.neuralnet</groupId>
+    <artifactId>neuralnet</artifactId>
+    <version>1</version>
+
+    <properties>
+        <maven.compiler.target>1.17</maven.compiler.target>
+        <maven.compiler.source>1.17</maven.compiler.source>
+    </properties>
+</project>

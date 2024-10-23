@@ -1,4 +1,4 @@
-package data;
+package com.behrainwala.data;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

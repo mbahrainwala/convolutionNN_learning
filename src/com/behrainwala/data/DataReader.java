@@ -1,4 +1,4 @@
-package data;
+package com.behrainwala.data;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

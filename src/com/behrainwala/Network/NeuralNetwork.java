@@ -1,8 +1,8 @@
-package Network;
+package com.behrainwala.Network;
 
-import data.Image;
-import data.MatrixUtility;
-import layers.Layer;
+import com.behrainwala.data.Image;
+import com.behrainwala.data.MatrixUtility;
+import com.behrainwala.layers.Layer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +37,6 @@ public class NeuralNetwork {
         expected[correctAnswer] = -1;
         /**
          * all the expected output vectors should be 0 except for the correct one which should be 1.
-         *
          * subtract the expected from the network output to get the error.
          */
 
@@ -63,9 +62,8 @@ public class NeuralNetwork {
         inList.add(MatrixUtility.multiply(image.data(), (1.0/scaleFactor)));
 
         double[] out = _layers.get(0).getOutput(inList);
-        int guess = getMaxIndex(out);
 
-        return guess;
+        return getMaxIndex(out);
     }
 
     public float test (List<Image> images) throws Exception {

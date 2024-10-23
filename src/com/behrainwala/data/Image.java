@@ -1,4 +1,4 @@
-package data;
+package com.behrainwala.data;
 
 public record Image(double[][] data, int label) {
     public Image(double[][] data, int label) {

@@ -1,4 +1,4 @@
-package layers;
+package com.behrainwala.layers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +25,10 @@ public abstract class Layer {
         double[] vector = new double[length*rows*columns];
 
         int i=0;
-        for(int l=0; l<length; l++){
-            for(int r=0; r<rows; r++){
-                for(int c=0; c<columns; c++){
-                    vector[i] = input.get(l)[r][c];
+        for (double[][] doubles : input) {
+            for (int r = 0; r < rows; r++) {
+                for (int c = 0; c < columns; c++) {
+                    vector[i] = doubles[r][c];
                     i++;
                 }
             }

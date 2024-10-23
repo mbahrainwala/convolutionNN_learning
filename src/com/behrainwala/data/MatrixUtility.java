@@ -1,8 +1,8 @@
-package data;
+package com.behrainwala.data;
 
 public class MatrixUtility {
 
-    private MatrixUtility(){};
+    private MatrixUtility(){}
     public static double[][] add(double[][] a, double[][] b){
         double[][] out = new double[a.length][a[0].length];
 
@@ -54,8 +54,7 @@ public class MatrixUtility {
         double[][] out = new double[rows][cols];
 
         for(int i=0; i< rows; i++)
-            for(int j=0; j< cols; j++)
-                out[rows-i-1][j]=input[i][j];
+            System.arraycopy(input[i], 0, out[rows - i - 1], 0, cols);
 
         return out;
     }

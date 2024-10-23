@@ -1,6 +1,6 @@
-package Network;
+package com.behrainwala.Network;
 
-import layers.*;
+import com.behrainwala.layers.*;
 
 import java.util.ArrayList;
 import java.util.List;

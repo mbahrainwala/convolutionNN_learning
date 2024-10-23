@@ -1,16 +1,16 @@
-package layers;
+package com.behrainwala.layers;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MaxPoolLayer2 extends Layer{
 
-    private int _stepSize;
-    private int _windowSize;
+    private final int _stepSize;
+    private final int _windowSize;
 
-    private int _inLength;
-    private int _inRows;
-    private int _inCols;
+    private final int _inLength;
+    private final int _inRows;
+    private final int _inCols;
 
     List<int[][]> _lastMaxRow;
     List<int[][]> _lastMaxCol;
@@ -30,8 +30,8 @@ public class MaxPoolLayer2 extends Layer{
         _lastMaxRow = new ArrayList<>();
         _lastMaxCol = new ArrayList<>();
 
-        for(int l =0; l < input.size(); l++){
-            output.add(pool(input.get(l)));
+        for (double[][] doubles : input) {
+            output.add(pool(doubles));
         }
 
         return output;

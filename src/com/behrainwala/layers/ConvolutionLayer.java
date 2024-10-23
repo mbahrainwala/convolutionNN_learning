@@ -1,6 +1,6 @@
-package layers;
+package com.behrainwala.layers;
 
-import data.MatrixUtility;
+import com.behrainwala.data.MatrixUtility;
 
 import java.util.ArrayList;
 import java.util.List;

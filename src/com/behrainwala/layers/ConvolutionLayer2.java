@@ -1,24 +1,24 @@
-package layers;
+package com.behrainwala.layers;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import static data.MatrixUtility.add;
-import static data.MatrixUtility.multiply;
+import static com.behrainwala.data.MatrixUtility.add;
+import static com.behrainwala.data.MatrixUtility.multiply;
 
 public class ConvolutionLayer2 extends Layer{
 
-    private long SEED;
+    private final long SEED;
 
     private List<double[][]> _filters;
-    private int _filterSize;
-    private int _stepsize;
+    private final int _filterSize;
+    private final int _stepsize;
 
-    private int _inLength;
-    private int _inRows;
-    private int _inCols;
-    private double _learningRate;
+    private final int _inLength;
+    private final int _inRows;
+    private final int _inCols;
+    private final double _learningRate;
 
     private List<double[][]> _lastInput;
 
@@ -63,9 +63,9 @@ public class ConvolutionLayer2 extends Layer{
 
         List<double[][]> output = new ArrayList<>();
 
-        for (int m = 0; m < list.size(); m++){
-            for(double[][] filter : _filters){
-                output.add(convolve(list.get(m), filter, _stepsize));
+        for (double[][] doubles : list) {
+            for (double[][] filter : _filters) {
+                output.add(convolve(doubles, filter, _stepsize));
             }
 
         }
@@ -217,9 +217,7 @@ public class ConvolutionLayer2 extends Layer{
         double[][] output = new double[rows][cols];
 
         for(int i = 0; i < rows; i++){
-            for(int j = 0; j < cols; j++){
-                output[rows-i-1][j] = array[i][j];
-            }
+            System.arraycopy(array[i], 0, output[rows - i - 1], 0, cols);
         }
         return output;
     }
